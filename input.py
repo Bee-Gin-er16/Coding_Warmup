@@ -6,7 +6,7 @@
 #OP2
 print('Name','Is','James', sep="**")
 
-#Op3
+#OP3
 print("%o" % 8)
 
 #OP4
@@ -44,12 +44,12 @@ quantity = 3
 price = 450
 print(f"I have {totalMoney} dollars so I can buy {quantity} football for {price:.2f} dollars. \n")
 
-#Op9
+#OP9
 import os
 size = os.stat("text.txt").st_size
 print('\nfile is empty\n') if size == 0 else print('file is not empty\n')
 
-#Op10
+#OP10
 with open('text.txt', "r") as fp:
     lines = fp.readlines()
     print(lines[2])
