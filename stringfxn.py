@@ -70,7 +70,6 @@ result = ""
 
 # reverse s2
 s2 = s2[::-1]
-
 # iterate string 
 # s1 ascending and s2 descending
 for i in range(length):
@@ -80,3 +79,84 @@ for i in range(length):
         result = result + s2[i]
 
 print(result)
+
+#OP7
+s1 = "Yn"
+s2 = "PYnative"
+print("Found") if s1 in s2 else print("Not Found")
+
+#Op8
+str1 = "Welcome to USA. usa awesome, isn't it?"
+str1 = str1.lower()
+res = str1.count("usa")
+print(f"The USA count is: {res}")
+
+#Op9
+str1 = "PYnative29@#8496"
+sum = 0
+div = 0
+for ind in str1:
+    if ind.isdigit():
+        sum += int(ind)
+        div += 1
+print(f"Sum: {sum} average: {sum/div}")
+
+#Op10
+str1 = "Apple"
+char_dict = dict()
+for char in str1:
+    count = str1.count(char)
+    char_dict[char] = count
+print('Result:', char_dict)
+
+#Op11
+str1 = "PYnative"
+print(str1[::-1])
+
+#Op12
+str1 = "Emma is a data scientist who knows Python. Emma works at google."
+print(f"Last occurence of Emma at index {str1.rfind("Emma")}")
+
+#Op13
+str1 = "Emma-is-a-data-scientist"
+res = ''.join(str1.split("-"))
+print(res)
+
+#Op14
+str_list = ["Emma", "Jon", "", "Kelly", None, "Eric", ""]
+res_list = list(filter(None, str_list))
+print(res_list)
+
+#Op15
+import re
+str1 = "/*Jon is @developer & musician"
+print("Original string is:", str1)
+
+# replace special symbols with ''
+res = re.sub(r'[^\w\s]', '', str1)
+print("New string is:", res)
+
+#OP16
+str1 = 'I am 25 years and 10 months old'
+int_list = []
+for char in str1:
+    if char.isdigit(): int_list.append(char)
+print(f"integers in list: {''.join(int_list)}")
+
+#Op17
+str1 = "Emma25 is Data scientist50 and AI Expert"
+res = []
+temp = str1.split()
+for item in temp:
+    if any(char.isalpha() for char in item) and any(char.isdigit() for char in item):
+        res.append(item)
+print("Displaying words with alphabets and numbers")
+for i in res:
+    print(i)
+
+#Op18
+import string
+str1 = '/*Jon is @developer & musician!!'
+for char in string.punctuation:
+    str1 = str1.replace(char, "#")
+print("The strings after replacement : ", str1)
