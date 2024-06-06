@@ -2,12 +2,14 @@ var express = require("express");
 var app = express();
 var connection = require('./database');
 
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
+
 app.get('/', (req, res) => {
-    // res.send("Hello World: MYSQL");
     let sql = "SELECT * FROM st_peter_users";
     connection.query(sql, (err, results) => {
         if(err) throw err;
-        res.send(results);
+        res.render('index', { users: results });
     });
 });
 
