@@ -4,23 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind Demo</title>
-    
 </head>
-<body class="container flex m-5 bg-slate-900">
-    <main class="container p-5 bg-white mx-sm">
-        <h1 class="text-black-50">Order Details:</h1>
-        <header class="flex flex-row ">
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid gray;
+    }
+
+    body {
+        display: grid;
+        place-items: center;
+        padding: 4% 0;
+    }
+
+    main {
+        width: 25%;
+        padding: 2%;
+    }
+    
+    #receipt_title{
+        padding: 3% 0 5%;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    header, #total, #checkout{
+        justify-content: space-between;
+    }
+    
+</style>
+<body class="bg-slate-900">
+    <main class="rounded-lg bg-white">
+        <h1 id="receipt_title" class="text-black-50">Order Details:</h1>
+        <header class="flex flex-row text-slate-500 font-medium">
             <h2>Total Items:</h2>
             <h2>2 Items</h2>
         </header>
-        <div class="container">item1</div>
-        <div class="container">item2</div>
-        <div id="total" class="flex flex-row">
+        <div class="container border rounded-lg border-black p-5 mb-3">item1</div>
+        <div class="container border rounded-lg border-black p-5 mb-3">item2</div>
+        <div id="total" class="flex flex-row pt-2 pb-2">
             <h2>Shipping</h2>
             <h2>$9.99</h2>
         </div>
-        <hr>
-        <div id="checkout" class="flex flex-row">
+        <hr class="mt-2 mb-2 w-full">
+        <div id="checkout" class="flex flex-row pt-2 pb-2">
             <h1>Total Price</h1>
             <h1>$467.99</h1>
         </div>
