@@ -1,10 +1,12 @@
 #FUNCTION DEFINITION
 
 #FP1
+# Given two integer numbers, return their product only if the product is equal to or lower than 1000. Otherwise, return their sum.
 def multi_add(n1, n2):
     return n1*n2 if n1*n2 <= 1000 else n1+n2
 
 #FP2
+# Write a program to iterate the first 10 numbers, and in each iteration, print the sum of the current and previous number.
 def sum_range(limit):
     current = 0
     previous = 0
@@ -15,6 +17,7 @@ def sum_range(limit):
         previous = current
 
 #FP3
+# Write a program to accept a string from the user and display characters that are present at an even index number. 
 def even_chars(string):
     char_list = []
     count = 0
@@ -25,10 +28,12 @@ def even_chars(string):
     return char_list
 
 #FP5
+# Write a program to remove characters from a string starting from zero up to n and return a new string.
 def samelast(list):
     return str(True if list[0] == list[-1] else False)
 
 #FP6
+# Write a function to return True if the first and last number of a given list is same. If numbers are different then return False.
 def isdivby(list, divisor):
     print("Divisible by "+str(divisor))
     for num in list:
@@ -37,6 +42,7 @@ def isdivby(list, divisor):
     print("")
 
 #FP9 Palindrome for integers only
+# Write a program to check if the given number is a palindrome number.
 def checkpal(num):
     rev_num = []
     ctr = len(str(num))-1
@@ -50,6 +56,7 @@ def checkpal(num):
         return False
 
 #OP10 Assuming that the lists are the same length
+# Given two list of numbers, write a program to create a new list such that the new list should contain odd numbers from the first list and even numbers from the second list.
 def whole_list(l1, l2):
     new_list = []
     for num in l1:
@@ -59,6 +66,7 @@ def whole_list(l1, l2):
     return new_list
 
 #OP11
+# Write a Program to extract each digit from an integer in the reverse order.
 def rev_order(num):
     iter = len(num)-1
     rev_string = []
@@ -68,6 +76,7 @@ def rev_order(num):
     return "".join(rev_string)
 
 #OP15
+# Write a function called exponent(base, exp) that returns an int value of base raises to the power of exp.
 def sqrd(base, exp):
     result = base
     ctr = exp
